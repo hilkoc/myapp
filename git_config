@@ -1,0 +1,12 @@
+[alias]
+	st = status
+	ch = checkout
+	br = branch
+	co = commit
+  qc = commit --amend --no-edit
+	ffmerge = merge --ff-only
+	ll = log -6 --date=short
+[format]
+	pretty = "%C(yellow)%h %C(magenta)%ad %C(green)%ae%C(red)%d %Creset%s"
+[log]
+	date = short
