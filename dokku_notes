@@ -1,0 +1,16 @@
+##Dokku notes
+
+Changes done to make it deploy with dokku
+
+ - Add DATABASE_URL in the production group of config/database.yml
+ 
+ - Add the ruby version used/required in the gemfile, otherwise dokku picks the wrong version.
+ 
+       ###### WARNING:
+       You have not declared a Ruby version in your Gemfile.
+       To set your Ruby version add this line to your Gemfile:
+       ruby '2.4.1'
+
+ - Run a db:migrate by hand on the server:
+   dokku run myapp bin/rake db:migrate
+
